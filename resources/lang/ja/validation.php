@@ -116,6 +116,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+      'route_name' => '路線名',
+      'station_name' => '駅名',
+      'prefecture_name' => '都道府県名',
+    ],
 
 ];
