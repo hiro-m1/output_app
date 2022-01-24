@@ -6,7 +6,7 @@
         <div class="col-md-12">
 
 <h1 class="col-md-12">検索条件を入力してください</h1>
-<h2 class="col-md-12">「スペース（全角・半角）」「、」、「・」区切りで複数検索ができます</h2>
+<h2 class="col-md-12">「スペース（全角・半角）」「、」「・」区切りで複数検索ができます</h2>
 <form action="{{ url('/route/serch')}}" method="post" class="form-group">
   {{ csrf_field()}}
   {{method_field('get')}}
