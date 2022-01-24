@@ -28,7 +28,7 @@
                   @foreach ($prefectures as $prefecture)
                   <tr onclick="getElementById('checkbox{{ $prefecture->municipality_id  }}').click();">
                     <th scope="row" style="width:15%">
-                     <input type="checkbox" name="municipality[]" value="{{ $prefecture->prefecture_id }}_{{ $prefecture->municipality_id }}" aria-label="Checkbox for following text input" onClick="DisChecked();" id="checkbox{{ $prefecture->municipality_id }}">
+                     <input type="checkbox" name="municipality[]" value="{{ $prefecture->prefecture_id }}_{{ $prefecture->municipality_id }}" aria-label="Checkbox for following text input" onclick="getElementById('checkbox{{ $prefecture->municipality_id  }}').click();DisMunicipalityChecked();" id="checkbox{{ $prefecture->municipality_id }}">
                     </th>
                     <td>
                       {{ $prefecture->prefecture_name }}

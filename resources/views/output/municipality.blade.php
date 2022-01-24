@@ -5,7 +5,7 @@
   <div class="row justify-content-center">
     <div class="col-md-12">
       <div class="card">
-        <div class="card-header">検索結果</div>
+        <div class="card-header">出力結果</div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <button class="btn btn-outline-secondary" type="button" id="button-addon1" onclick="copyToClipboard()">コピー</button>

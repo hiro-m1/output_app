@@ -28,7 +28,7 @@
                   @foreach ($routes as $route)
                   <tr onclick="getElementById('checkbox{{ $route->station_id  }}').click();">
                     <th scope="row" style="width:15%">
-                     <input type="checkbox" name="station[]" value="{{ $route->route_id }}_{{ $route->station_id }}" aria-label="Checkbox for following text input" onClick="DisStationChecked();" id="checkbox{{ $route->station_id }}">
+                     <input type="checkbox" name="station[]" value="{{ $route->route_id }}_{{ $route->station_id }}" aria-label="Checkbox for following text input" onclick="getElementById('checkbox{{ $route->station_id  }}').click();DisStationChecked();" id="checkbox{{ $route->station_id }}">
                     </th>
                     <td>
                       {{ $route->route_name }}
@@ -43,7 +43,7 @@
                   @foreach ($stations as $station)
                   <tr onclick="getElementById('checkbox{{ $station->station_id  }}').click();">
                     <th scope="row" style="width:15%">
-                     <input type="checkbox" name="station[]" value="{{ $station->route_id }}_{{ $station->station_id }}" aria-label="Checkbox for following text input" onClick="DisStationChecked();" id="checkbox{{ $station->station_id }}">
+                     <input type="checkbox" name="station[]" value="{{ $station->route_id }}_{{ $station->station_id }}" aria-label="Checkbox for following text input" onclick="getElementById('checkbox{{ $station->station_id  }}').click();DisStationChecked();" id="checkbox{{ $station->station_id }}">
                     </th>
                     <td>
                       {{ $station->route_name }}
