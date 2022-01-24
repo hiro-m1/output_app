@@ -30,6 +30,8 @@ Route::get('/route/serch','RouteController@serch')->middleware('keyword');
 Route::get('/station/serch','StationController@serch')->middleware('keyword');
 // 都道府県検索
 Route::get('/prefecture/serch','PrefectureController@serch')->middleware('keyword');
+// 市町村検索
+Route::get('/municipality/serch','MunicipalityController@serch')->middleware('keyword');
 // 駅名の出力
 Route::post('/output/station','StationOutputController@view');
 // 市町村区の出力

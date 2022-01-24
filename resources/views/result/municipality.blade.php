@@ -39,6 +39,21 @@
                   </tr>
                   @endforeach
                   @endif
+                  @if (!empty($municipalities))
+                  @foreach ($municipalities as $municipality)
+                  <tr onclick="getElementById('checkbox{{ $municipality->municipality_id  }}').click();">
+                    <th scope="row" style="width:15%">
+                     <input type="checkbox" name="municipality[]" value="{{ $municipality->prefecture_id }}_{{ $municipality->municipality_id }}" aria-label="Checkbox for following text input" onclick="getElementById('checkbox{{ $municipality->municipality_id  }}').click();DisMunicipalityChecked();" id="checkbox{{ $municipality->municipality_id }}">
+                    </th>
+                    <td>
+                      {{ $municipality->prefecture_name }}
+                    </td>
+                    <td>
+                      {{ $municipality->municipality_name }}
+                    </td>
+                  </tr>
+                  @endforeach
+                  @endif
                 </tbody>
               </table>
               <p><button type="submit" class="btn btn-primary">出力</button></p>

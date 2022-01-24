@@ -34,6 +34,11 @@ class KeywordExploder
         if(!empty($request->input('prefecture_name'))) {
           $keyword = $request->input('prefecture_name');
         }
+
+        if(!empty($request->input('municipality_name'))) {
+          $keyword = $request->input('municipality_name');
+        }
+        
         $ret = [];
 
         if (!empty($keyword)){
