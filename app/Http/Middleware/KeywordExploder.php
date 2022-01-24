@@ -46,6 +46,10 @@ class KeywordExploder
             $keyword = str_replace('+', ' ', $keyword);
             // 全角スペースを半角スペースに変換
             $keyword = str_replace('　', ' ', $keyword);
+            // 読点を半角スペースに変換
+            $keyword = str_replace('、', ' ', $keyword);
+            // 点を半角スペースに変換
+            $keyword = str_replace('・', ' ', $keyword);
             // %はSQL実行時にLIKEのパラメータとして使うのでスペースにする。
             $keyword = str_replace('%', ' ', $keyword);
             // 取得したキーワードのスペースの重複を除く。
