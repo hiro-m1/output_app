@@ -49,8 +49,18 @@ class StationOutputController extends Controller
         $text = $text.$output->route_name.'【'.$output->station_name.'】'.'_';
       }
     }
-    
-    return view('output.station', compact('outputs', 'text'));
+
+    $i = 0;
+    $text2 = '';
+    foreach($outputs as $output) {
+      $i++;
+      if($count == $i) {
+        $text2 = $text2.'【'.$output->station_name.'】';
+      } else {
+        $text2 = $text2.'【'.$output->station_name.'】'.'_';
+      }
+    }
+    return view('output.station', compact('outputs', 'text', 'text2'));
 
   }
 }

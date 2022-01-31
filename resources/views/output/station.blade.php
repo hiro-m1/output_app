@@ -12,6 +12,12 @@
             </div>
             <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" id="copyTarget" type="text" value="{{ $text }}" readonly>
            </div>
+           <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon1" onclick="copyToClipboard2()">コピー</button>
+            </div>
+            <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" id="copyTarget2" type="text" value="{{ $text2 }}" readonly>
+           </div>
            <div class="card-body">
              @if (session('status'))
             <div class="alert alert-success" role="alert">
